@@ -309,43 +309,69 @@ class _ImageGalleryPageState extends State<ImageGalleryPage> with SingleTickerPr
                     textDirection: TextDirection.rtl,
                   ),
                   const SizedBox(height: 20),
-                  GestureDetector(
-                    onTap: () => _launchPhoneCall('01005365486'), // لجعل الرقم قابل للضغط
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF4F46E5), // لون بنفسجي جذاب
-                        borderRadius: BorderRadius.circular(12),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Colors.black26,
-                            blurRadius: 10,
-                            offset: Offset(0, 5),
-                          ),
-                        ],
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          const Icon(Icons.phone, color: Colors.white, size: 28),
-                          const SizedBox(width: 15),
-                          Text(
-                            '01005365486',
-                            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                                  fontSize: screenWidth > 768 ? 30 : 22, // حجم خط مستجيب لرقم الهاتف
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                            textDirection: TextDirection.ltr, // رقم الهاتف يفضل أن يكون LTR
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  // مهندس/ عبدالرحمن عبدالصمد
+                  _buildContactRow(context, 'م/ عبدالرحمن عبدالصمد', '01014894756', screenWidth),
+                  const SizedBox(height: 10),
+                  _buildContactRow(context, '', '01005365486', screenWidth),
+                  const SizedBox(height: 10),
+                  // مهندس/ محمد قرنى
+                  _buildContactRow(context, 'م/ محمد قرنى', '01026031424', screenWidth),
                 ],
               ),
             ),
             const SizedBox(height: 48.0), // مسافة في الأسفل
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildContactRow(BuildContext context, String name, String phoneNumber, double screenWidth) {
+    return GestureDetector(
+      onTap: () => _launchPhoneCall(phoneNumber),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+        decoration: BoxDecoration(
+          color: const Color(0xFF4F46E5), // لون بنفسجي جذاب
+          borderRadius: BorderRadius.circular(12),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black26,
+              blurRadius: 10,
+              offset: Offset(0, 5),
+            ),
+          ],
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center, // توسيط المحتوى
+          children: [
+            const Icon(Icons.phone, color: Colors.white, size: 28),
+            const SizedBox(width: 15),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start, // لمحاذاة النص لليمين
+              children: [
+                if (name.isNotEmpty) // عرض الاسم فقط إذا كان موجوداً
+                  Text(
+                    name,
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                          fontSize: screenWidth > 768 ? 24 : 18,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                    textDirection: TextDirection.rtl, // الاسم باللغة العربية
+                  ),
+                Text(
+                  phoneNumber,
+                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                        fontSize: screenWidth > 768 ? 30 : 22,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                  textDirection: TextDirection.ltr, // رقم الهاتف يفضل أن يكون LTR
+                ),
+              ],
+            ),
           ],
         ),
       ),
@@ -506,7 +532,8 @@ class _ImageCardState extends State<ImageCard> with SingleTickerProviderStateMix
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            FittedBox( // Wrap title with FittedBox for responsiveness
+                            FittedBox(
+                              // Wrap title with FittedBox for responsiveness
                               fit: BoxFit.scaleDown,
                               child: AnimatedDefaultTextStyle(
                                 duration: const Duration(milliseconds: 300),
@@ -524,7 +551,8 @@ class _ImageCardState extends State<ImageCard> with SingleTickerProviderStateMix
                               ),
                             ),
                             const SizedBox(height: 12),
-                            Expanded( // Use Expanded to give description flexible space
+                            Expanded(
+                              // Use Expanded to give description flexible space
                               child: AnimatedDefaultTextStyle(
                                 duration: const Duration(milliseconds: 300),
                                 curve: Curves.easeOut,
