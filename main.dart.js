@@ -33032,9 +33032,9 @@ A.a7v.prototype={
 $2(a,b){return new A.kV(this.a.r[b],A.cz(0,150*(b+1)),null)},
 $S:207}
 A.a7w.prototype={
-$2(a,b){var s="\u0645\u062f\u064a\u0631 \u0627\u0644\u0645\u0628\u064a\u0639\u0627\u062a",r="\u0645/ \u0639\u0628\u062f\u0627\u0644\u0631\u062d\u0645\u0646 \u0639\u0628\u062f\u0627\u0644\u0635\u0645\u062f",q="01014894756",p="\u0627\u0644\u0645\u062f\u064a\u0631 \u0627\u0644\u0645\u0627\u0644\u064a",o="\u0645/ \u0645\u062d\u0645\u062f \u0642\u0631\u0646\u0649",n="01026031424",m="\u0631\u0626\u064a\u0633 \u0645\u062c\u0644\u0633 \u0627\u0644\u0627\u062f\u0627\u0631\u0629",l="\u0645/ \u0634\u0631\u064a\u0641 \u0639\u0627\u0645\u0631",k="01008490772",j=this.a,i=this.b,h=t.G
-if(b.b<768)return A.hM(A.a([j.kj(a,s,i),B.c9,j.ki(a,r,q,i),B.jr,j.kj(a,p,i),B.c9,j.ki(a,o,n,i),B.jr,j.kj(a,m,i),B.c9,j.ki(a,l,k,i)],h),B.af,B.am)
-else return A.mR(A.hM(A.a([j.kj(a,s,i),B.c9,j.ki(a,r,q,i),B.jr,A.a1A(A.a([A.mR(A.hM(A.a([j.kj(a,p,i),B.c9,j.ki(a,o,n,i)],h),B.af,B.am),1),B.Xj,A.mR(A.hM(A.a([j.kj(a,m,i),B.c9,j.ki(a,l,k,i)],h),B.af,B.am),1)],h),B.bp,B.am,B.dA)],h),B.af,B.am),1)},
+$2(a,b){var s="\u0645\u062f\u064a\u0631 \u0627\u0644\u0645\u0628\u064a\u0639\u0627\u062a",r="\u0645/ \u0639\u0628\u062f\u0627\u0644\u0631\u062d\u0645\u0646 \u0639\u0628\u062f\u0627\u0644\u0635\u0645\u062f",q="01014894756",p="\u0627\u0644\u0645\u062f\u064a\u0631 \u0627\u0644\u0645\u0627\u0644\u064a",o="01026031424",n="\u0631\u0626\u064a\u0633 \u0645\u062c\u0644\u0633 \u0627\u0644\u0627\u062f\u0627\u0631\u0629",m="\u0645/ \u0634\u0631\u064a\u0641 \u0639\u0627\u0645\u0631",l="01008490772",k=this.a,j=this.b,i=t.G
+if(b.b<768)return A.hM(A.a([k.kj(a,s,j),B.c9,k.ki(a,r,q,j),B.jr,k.kj(a,p,j),B.c9,k.ki(a,"\u0645/ \u0645\u062d\u0645\u062f \u0633\u0644\u064a\u0645\u0627\u0646",o,j),B.jr,k.kj(a,n,j),B.c9,k.ki(a,m,l,j)],i),B.af,B.am)
+else return A.mR(A.hM(A.a([k.kj(a,s,j),B.c9,k.ki(a,r,q,j),B.jr,A.a1A(A.a([A.mR(A.hM(A.a([k.kj(a,p,j),B.c9,k.ki(a,"\u0645/ \u0645\u062d\u0645\u062f \u0642\u0631\u0646\u0649",o,j)],i),B.af,B.am),1),B.Xj,A.mR(A.hM(A.a([k.kj(a,n,j),B.c9,k.ki(a,m,l,j)],i),B.af,B.am),1)],i),B.bp,B.am,B.dA)],i),B.af,B.am),1)},
 $S:210}
 A.kV.prototype={
 am(){return new A.LT(B.ec,B.e8,null,null)}}
