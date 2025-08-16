@@ -480,7 +480,7 @@ class _ImageGalleryPageState extends State<ImageGalleryPage>
                             const SizedBox(height: 12),
                             _buildContactRow(
                               context,
-                              'عبدالرحمن عبدالصمد',
+                              'م/ عبدالرحمن عبدالصمد',
                               '01014894756',
                               screenWidth,
                             ),
@@ -507,8 +507,8 @@ class _ImageGalleryPageState extends State<ImageGalleryPage>
                             const SizedBox(height: 12),
                             _buildContactRow(
                               context,
-                              'شريف عامر',
-                              '01005365486',
+                              'م/ شريف عامر',
+                              '01008490772',
                               screenWidth,
                             ),
                           ],
@@ -566,7 +566,7 @@ class _ImageGalleryPageState extends State<ImageGalleryPage>
                                         _buildContactRow(
                                           context,
                                           'م/ شريف عامر',
-                                          '01005365486',
+                                          '01008490772',
                                           screenWidth,
                                         ),
                                       ],
